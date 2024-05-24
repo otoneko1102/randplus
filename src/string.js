@@ -2,9 +2,14 @@ function string(length, input) {
   if (typeof length !== 'number' || length < 0) throw new Error('length must be non-negative number.');
   if (input && typeof input !== 'string' && !Array.isArray(input)) throw new Error('input must be string or array.');
 
-  let chars = '1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-  if (input && typeof input === 'string') chars = input.split('');
-  if (input && Array.isArray(input)) chars = input;
+  let chars;
+  if (input && typeof input === 'string') {
+    chars = input.split('');
+  } else if (input) {
+    chars = input;
+  } else {
+    chars = '1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  }
 
   for (const char of chars) {
     if (typeof char !== 'string') throw new Error('all elements of input must be string.');
