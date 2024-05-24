@@ -10,8 +10,14 @@ function string(length, input) {
     if (typeof char !== 'string') throw new Error('all elements of input must be string.');
   }
 
+  const len = parseInt(length);
+
   let result = '';
-  for (let i = 0; i < length; i++) {
+  if (len == 0) {
+    result = null;
+    return result;
+  }
+  for (let i = 0; i < len; i++) {
     result += chars[Math.floor(Math.random() * chars.length)];
   }
   
