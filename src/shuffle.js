@@ -1,4 +1,4 @@
-function string(input) {
+function shuffle(input) {
   if (typeof input !== 'string' && !Array.isArray(input)) throw new Error('input must be string or array.');
 
   let array;
@@ -23,4 +23,4 @@ function string(input) {
   return result;
 }
 
-module.exports = string;
+module.exports = shuffle;
