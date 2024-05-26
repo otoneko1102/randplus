@@ -5,8 +5,10 @@ A package that add functions for random.
 ```js
 const random = require('randplus');
 
+console.log(random.random()); // 0 ~ 1 (!= 1)
 console.log(random.number(1, 10)); // 1 ~ 10
 console.log(random.integer(1, 10)); // 1 ~ 10
+console.log(random.boolean()); // true or false
 console.log(random.array(['Hello', 'World!'])); // 'Hello' or 'World!'
 console.log(random.string(3)); // '000' ~ 'ZZZ'
 console.log(random.string(3, 'abc')); // 'aaa' ~ 'ccc'

@@ -1,6 +1,6 @@
 {
   "name": "randplus",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "A package that add functions for random.",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,15 @@
     "plus",
     "addon",
     "extension",
-    "math"
+    "math",
+    "number",
+    "integer",
+    "string",
+    "array",
+    "shuffle",
+    "color",
+    "hex",
+    "rgb"
   ],
   "author": "otoneko.",
   "license": "ISC",
