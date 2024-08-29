@@ -1,4 +1,4 @@
-function color(format) {
+function color(format = 'hex') {
   if (format !== 'hex' && format !== 'rgb') throw new Error("invalid format. use 'hex' or 'rgb'.");
 
   const r = Math.floor(Math.random() * 256);

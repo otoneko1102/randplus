@@ -1,6 +1,6 @@
 {
   "name": "randplus",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "A package that add functions for random.",
   "main": "index.js",
   "scripts": {
@@ -30,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/otoneko1102/randplus/issues"
   },
-  "homepage": "https://github.com/otoneko1102/randplus#readme"
+  "homepage": "https://github.com/otoneko1102/randplus#readme",
+  "dependencies": {
+    "@randplus/0to1": "^1.0.0"
+  }
 }

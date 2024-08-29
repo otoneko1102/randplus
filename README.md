@@ -6,15 +6,19 @@ A package that add functions for random.
 const random = require('randplus');
 
 console.log(random.random()); // 0 ~ 1 (!= 1)
+console.log(random.random(true)); // 0 ~ 1 (== 1)
 console.log(random.number(1, 10)); // 1 ~ 10
+console.log(random.number(1, 10, false)); // 1 ~ 10 (!= 10)
 console.log(random.integer(1, 10)); // 1 ~ 10
+console.log(random.integer(1, 10, false)); // 1 ~ 10 (!= 10)
 console.log(random.boolean()); // true or false
 console.log(random.array(['Hello', 'World!'])); // 'Hello' or 'World!'
 console.log(random.string(3)); // '000' ~ 'ZZZ'
-console.log(random.string(3, 'abc')); // 'aaa' ~ 'ccc'
-console.log(random.string(3, ['01', '02', '03'])); // '010101' ~ '030303'
+console.log(random.string('abc', 3)); // 'aaa' ~ 'ccc'
+console.log(random.string(['01', '02', '03'], 3)); // '010101' ~ '030303'
 console.log(random.shuffle('abcdef')); // 'cfeadb'
 console.log(random.shuffle(['a', 'b', 'c', 'd', 'e', 'f'])); // ['c', 'f', 'e', 'a', 'd', 'b']
+console.log(random.color()); // '000000' ~ 'ffffff'
 console.log(random.color('hex')); // '000000' ~ 'ffffff'
 console.log(random.color('rgb')); // [0, 0, 0] ~ [255, 255, 255]
 ```

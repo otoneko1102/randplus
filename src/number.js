@@ -1,8 +1,21 @@
-function number(start, end) {
+const randInc1 = require('@randplus/0to1');
+
+function number(start = 0, end = 1, inc = false) {
+  if (typeof start === 'boolean') {
+    inc = start, start = 0, end = 1;
+  }
   if (typeof start !== 'number' || typeof end !== 'number') throw new Error('start and end must be numbers.');
   if (start > end) throw new Error('start must be less than or equal to end.');
+  if (typeof inc !== 'boolean') throw new Error('inc must be boolean.');
 
-  const result = Math.random() * (end - start) + start;
+  let result;
+
+  if (inc) {
+    const latestVersion = randInc1.versions.at(-1);
+    result = randInc1(latestVersion) * (end - start) + start;
+  } else {
+    result = Math.random() * (end - start) + start;
+  }
 
   return result;
 }

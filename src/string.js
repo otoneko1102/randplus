@@ -1,4 +1,4 @@
-function string(length, input) {
+function string(input, length = 1) {
   if (typeof length !== 'number' || length < 0) throw new Error('length must be non-negative number.');
   if (input && typeof input !== 'string' && !Array.isArray(input)) throw new Error('input must be string or array.');
 
