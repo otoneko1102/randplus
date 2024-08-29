@@ -11,8 +11,7 @@ function number(start = 0, end = 1, inc = false) {
   let result;
 
   if (inc) {
-    const latestVersion = randInc1.versions.at(-1);
-    result = randInc1(latestVersion) * (end - start) + start;
+    result = randInc1() * (end - start) + start;
   } else {
     result = Math.random() * (end - start) + start;
   }
