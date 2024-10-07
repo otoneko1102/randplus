@@ -13,6 +13,8 @@ console.log(random.integer(1, 10)); // 1 ~ 10
 console.log(random.integer(1, 10, false)); // 1 ~ 10 (!= 10)
 console.log(random.boolean()); // true or false
 console.log(random.array(['Hello', 'World!'])); // 'Hello' or 'World!'
+console.log(random.buffer()); // <Buffer >
+console.log(random.buffer(16)); // '<Buffer 26 bc 62 84 b0 94 5e c5 1a d5 fd 69 6f d3 78 b1>'
 console.log(random.string(3)); // '000' ~ 'ZZZ'
 console.log(random.string('abc', 3)); // 'aaa' ~ 'ccc'
 console.log(random.string(['01', '02', '03'], 3)); // '010101' ~ '030303'
