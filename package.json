@@ -1,8 +1,9 @@
 {
   "name": "randplus",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "A package that add functions for random.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
