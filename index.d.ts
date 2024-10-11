@@ -10,9 +10,15 @@ declare module 'randplus' {
     string(input: string, length: number): string;
     string(input: string[], length: number): string;
     shuffle(input: string | any[]): string | any[];
-    color(format?: 'hex' | 'rgb'): string | [number, number, number];
+    color(format?: 'hex' | 'rgb' | 'word', options?: { language?: 'en' | 'ja' | 'cn'; prefix?: string }): string | [number, number, number] | string;
   }
 
-  const random: Random;
+  namespace color {
+    function hex(prefix?: string): string;
+    function rgb(): [number, number, number];
+    function word(language?: 'en' | 'ja' | 'cn'): string;
+  }
+
+  const random: Random & { color: typeof color };
   export = random;
 }

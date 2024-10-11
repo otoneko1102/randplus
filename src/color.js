@@ -1,16 +1,22 @@
-function color(format = 'hex') {
-  if (format !== 'hex' && format !== 'rgb') throw new Error("invalid format. use 'hex' or 'rgb'.");
+const randColor = require('@randplus/color');
 
-  const r = Math.floor(Math.random() * 256);
-  const g = Math.floor(Math.random() * 256);
-  const b = Math.floor(Math.random() * 256);
+function color(format, options) {
+  return randColor(format, options)
+}
 
-  if (format === 'hex') {
-    const hex = r.toString(16).padStart(2, '0') + g.toString(16).padStart(2, '0') + b.toString(16).padStart(2, '0');
-    return hex;
-  } else if (format === 'rgb') {
-    return [r, g, b];
-  }
+function hex(prefix) {
+  return randColor.hex(prefix);
+}
+
+function rgb() {
+  return randColor.rgb();
+}
+
+function word(language) {
+  return randColor.word(language);
 }
 
 module.exports = color;
+module.exports.hex = hex;
+module.exports.rgb = rgb;
+module.exports.word = word;

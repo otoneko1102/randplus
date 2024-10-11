@@ -22,7 +22,15 @@ console.log(random.shuffle('abcdef')); // 'cfeadb'
 console.log(random.shuffle(['a', 'b', 'c', 'd', 'e', 'f'])); // ['c', 'f', 'e', 'a', 'd', 'b']
 console.log(random.color()); // '000000' ~ 'ffffff'
 console.log(random.color('hex')); // '000000' ~ 'ffffff'
+console.log(random.color('hex', { prefix: '#' })); // '#000000' ~ '#ffffff'
 console.log(random.color('rgb')); // [0, 0, 0] ~ [255, 255, 255]
+console.log(random.color('word')); // 'limegreen'
+console.log(random.color('word', { language: 'ja' })); // '鉄色'
+console.log(random.color.hex()); // '000000' ~ 'ffffff'
+console.log(random.color.hex('#')); // '000000' ~ 'ffffff'
+console.log(random.color.rgb()); // [0, 0, 0] ~ [255, 255, 255]
+console.log(random.color.word()); // 'limegreen'
+console.log(random.color.word('cn')); // '紫磨金' 
 ```
 
 ## Get Support
