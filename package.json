@@ -1,6 +1,6 @@
 {
   "name": "randplus",
-  "version": "5.0.0-dev.0",
+  "version": "5.1.1",
   "description": "A package that add functions for random.",
   "main": "index.js",
   "types": "index.d.ts",
@@ -26,7 +26,15 @@
     "shuffle",
     "color",
     "hex",
-    "rgb"
+    "rgb",
+    "jp",
+    "japan",
+    "japanese",
+    "cn",
+    "china",
+    "chinese",
+    "en",
+    "english"
   ],
   "author": "otoneko.",
   "license": "ISC",
@@ -37,6 +45,6 @@
   "dependencies": {
     "@randplus/0to1": "^2.0.0",
     "@randplus/buffer": "^1.0.0",
-    "@randplus/color": "^1.0.0-dev.1"
+    "@randplus/color": "^2.0.1"
   }
 }
